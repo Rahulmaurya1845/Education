@@ -1,0 +1,124 @@
+.payment-section {
+  width: 100%;
+  background: #ffffff;
+}
+
+/* Header Section */
+.payment-header {
+  padding: 60px 20px;
+  text-align: center;
+   background: linear-gradient(90deg, #fff9f3, #ffead6);
+}
+
+.payment-header h1 {
+  font-size: 38px;
+  font-weight: bold;
+  color: #113c63;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #6b6b6b;
+}
+
+.breadcrumb-home {
+  text-decoration: none;
+  color: #ff7b00;
+  font-weight: 600;
+}
+
+.breadcrumb-home:hover {
+  color: #ff4400;
+}
+
+/* Content Layout */
+.payment-content {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+/* QR Box */
+.qr-box {
+  width: 450px;
+  text-align: center;
+}
+
+.qr-box h3 {
+  background: #134b7a;
+  color: #fff;
+  padding: 14px 0;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.qr-placeholder {
+  width: 100%;
+  margin-top: 20px;
+  border: 2px dashed #cccccc;
+  height: 420px; /* Increased size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.qr-placeholder img {
+  width: 92%;
+  max-height: 350px; /* Increased height */
+}
+
+.qr-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+
+/* Bank Details */
+.bank-details-box {
+  width: 520px;
+}
+
+.bank-details-box h3 {
+  color: #ff7b00;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.bank-details-box table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+/* Alternate Row Pattern */
+.bank-details-box tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.bank-details-box tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.bank-details-box td {
+  border: 1px solid #ddd;
+  padding: 13px;
+}
+
+
+/* Responsive */
+@media(max-width: 900px) {
+  .payment-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .qr-box, .bank-details-box {
+    width: 90%;
+  }
+}

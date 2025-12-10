@@ -1,0 +1,95 @@
+.management-container {
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+/* Gradient Title Section */
+.management-header {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(90deg, #fff9f3, #ffead6);
+}
+
+.management-header h1 {
+  color: #113c63;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.breadcrumb {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #6b6b6b;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: #ff7a00;
+  font-weight: 600;
+}
+
+.breadcrumb-link:hover {
+  color: #ff4500;
+}
+
+/* Main layout */
+.management-content {
+  display: flex;
+  gap: 50px;
+  padding: 60px 80px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Image */
+.management-image {
+  width: 420px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Text Content */
+.management-text {
+  max-width: 600px;
+}
+
+.management-text h3 {
+  color: #ff7b00;
+  border-bottom: 2px solid #ff7b00;
+  width: fit-content;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.management-text h2 {
+  color: #113c63;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.management-text p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+/* Responsive Fixes */
+@media screen and (max-width: 900px) {
+  .management-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .management-image {
+    width: 90%;
+  }
+
+  .management-text {
+    text-align: left;
+  }
+}

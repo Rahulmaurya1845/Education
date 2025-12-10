@@ -1,0 +1,59 @@
+.download-page {
+  width: 100%;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.banner {
+  background: linear-gradient(90deg, #fff9f3, #ffead6);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 36px;
+  color: #113c63;
+  margin-bottom: 8px;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  color: #6b6b6b;
+}
+
+.breadcrumb-home {
+  text-decoration: none;
+  color: #ff7a00;
+  font-weight: 600;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.main-content {
+  flex: 2;
+}
+
+.main-content h2 {
+  font-size: 28px;
+  color: #113c63;
+  margin-bottom: 20px;
+  text-align: center; /* Centers the "Affiliation Process" text */
+}
+
+.tab-panel {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.05);
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.tab-panel:hover {
+  background-color: #4976c4; /* Light orange background on hover for the whole panel */
+}
