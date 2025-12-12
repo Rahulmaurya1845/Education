@@ -511,7 +511,7 @@ import blog5 from "../images/blog5.jpg";
 const blogs = [
   { img: blog1, title: "Help to Women Education", date: "03 March 2023", slug: "help-to-women-education" },
   { img: blog2, title: "Admission Notice", date: "21 May 2024", slug: "admission-notice" },
-  { img: blog3, title: "Admission Open 2024-2025", date: "21 May 2024", slug: "admission-open" },
+  // { img: blog3, title: "Admission Open 2024-2025", date: "21 May 2024", slug: "admission-open" },
   { img: blog4, title: "Annual Function 2023", date: "11 Feb 2023", slug: "function-2023" },
   { img: blog5, title: "Student Achievement", date: "02 April 2023", slug: "student-achievement" },
 ];
@@ -543,24 +543,26 @@ export default function Home() {
       </div>
 
       {/* ===== ABOUT SECTION ===== */}
-      <section className="about-section">
-        <div className="about-image">
-          <img src={img12} alt="About Meenakshi Education" />
-        </div>
-        <div className="about-content">
-          <h4>About Us</h4>
-          <h2>Meenakshi Education Sansthan - Salumber</h2>
-          <p>
-            Meenakshi Education Sansthan is a leading education institute,
-            established in 2019 to help students who want quality education and
-            success in competitive exams.
-          </p>
-          <button className="about-btn">Know More →</button>
-        </div>
-      </section>
+      <section className="about-section fade-up">
+  <div className="about-image">
+    <img src={img12} alt="About Meenakshi Education" />
+  </div>
+
+  <div className="about-content">
+    <h4>About Us</h4>
+    <h2>Meenakshi Education Sansthan - Salumber</h2>
+    <p>
+      Meenakshi Education Sansthan is a leading education institute,
+      established in 2019 to help students who want quality education and
+      success in competitive exams.
+    </p>
+    <button className="about-btn">Know More →</button>
+  </div>
+</section>
+
 
       {/* ===== COURSES ===== */}
-      <section className="courses-section">
+      <section className="courses-section ">
         <h3 className="courses-top">Top Categories</h3>
         <h2 className="courses-title">Browse Popular Course</h2>
 
@@ -658,7 +660,7 @@ export default function Home() {
 
       {/* ===== PANEL SECTION ===== */}
       <section className="panel-section py-12 px-6 text-center">
-        <h4 className="text-orange-500 font-semibold tracking-widest">OUR PANEL</h4>
+        <h1 className="text-orange-500 font-semibold tracking-widest">OUR PANEL</h1>
         <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-10">
           Uses of panel page
         </h2>
@@ -701,23 +703,32 @@ export default function Home() {
         </p>
 
         <Swiper
-          slidesPerView={1}
-          spaceBetween={20}
-          autoplay={{ delay: 4000 }}
-          loop={true}
-          breakpoints={{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
-          modules={[Autoplay]}
-          className="w-full max-w-7xl mx-auto"
-        >
-          {[{ img: img23, title: "Function" }, { img: img25, title: "Certificate" }, { img: img24, title: "Admission Open" }, { img: img22, title: "Group Photo" }].map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-white rounded-xl overflow-hidden shadow-md border text-center p-3">
-                <img src={item.img} alt={item.title} className="w-full h-20 object-cover rounded-lg" />
-                <h3 className="py-3 font-bold text-gray-800 text-lg">{item.title}</h3>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+  slidesPerView={1}
+  spaceBetween={20}
+  autoplay={{ delay: 4000 }}
+  loop={true}
+  breakpoints={{
+    640: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  }}
+  modules={[Autoplay]}
+  className="w-full max-w-7xl mx-auto"
+>
+  {[
+    { img: img23, title: "Function" },
+    { img: img25, title: "Certificate" },
+    { img: img24, title: "Admission Open" },
+    { img: img22, title: "Group Photo" }
+  ].map((item, index) => (
+    <SwiperSlide key={index}>
+      <div className="auth-card">
+        <img src={item.img} alt={item.title} />
+        <h3>{item.title}</h3>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
       </section>
     </>
   );

@@ -27,8 +27,8 @@ export default function Footer() {
         {/* USEFUL LINKS */}
         <div className="footer-links">
           <h3>USEFUL LINKS</h3>
-          <Link to="/">Home Page</Link>
-          <Link to="/gallery">Photo Gallery</Link>
+          {/* <Link to="/">Home Page</Link> */}
+          {/* <Link to="/gallery">Photo Gallery</Link> */}
           <Link to="/contact/contact-us">Contact Us</Link>
           <Link to="/highlights/blog">Blog</Link>
           <Link to="/highlights/event">Event</Link>
@@ -38,11 +38,11 @@ export default function Footer() {
         {/* QUICK LINKS */}
         <div className="footer-links">
           <h3>QUICK LINKS</h3>
-          <Link to="/about-us">About Us</Link>
-          <Link to="/courses">Courses</Link>
+          {/* <Link to="/about-us">About Us</Link> */}
+          {/* <Link to="/courses">Courses</Link> */}
           <Link to="/student-zone/student-login">Student Login</Link>
           <Link to="/online-fee-payment">Online Fee Payment</Link>
-          <Link to="/career">Career</Link>
+          {/* <Link to="/career">Career</Link> */}
         </div>
 
         {/* CONTACT INFO */}

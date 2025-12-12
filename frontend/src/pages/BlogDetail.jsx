@@ -377,6 +377,161 @@
 // }
 
 
+// import React from "react";
+// import { useParams, Link } from "react-router-dom";
+// import "./BlogDetail.css";
+
+// import blogImg1 from "../images/blog1.jpg";
+// import blogImg2 from "../images/blog2.jpg";
+// import blogImg3 from "../images/blog3.jpg";
+// import blogImg4 from "../images/blog4.jpg";
+// import blogImg5 from "../images/blog5.jpg";
+
+// /**
+//  * FULLY FIXED VERSION
+//  * Slugs, images, and full-page routes are all CORRECT now.
+//  */
+// export const blogContent = {
+//   "help-to-women-education": {
+//     title: "Help to Women Education",
+//     date: "03 March 2023",
+//     img: blogImg1,
+//     page: "/highlights/help-to-women-education",
+//     content: `Women empowerment improves lifestyle, confidence, and career opportunities.`,
+//   },
+
+//   "admission-notice": {
+//     title: "Admission Notice",
+//     date: "21 May 2024",
+//     img: blogImg2,
+//     page: "/highlights/student-governance",
+//     content: `New admissions are open for session 2024-2025.`,
+//   },
+
+//   "admission-open-2024": {
+//     title: "Admission Open 2024-2025",
+//     date: "21 May 2024",
+//     img: blogImg3,
+//     page: "/highlights/prospective-faculty",
+//     content: `Admissions have started for all UG & Diploma courses.`,
+//   },
+
+//   "function-2023": {
+//     title: "Annual Function 2023",
+//     date: "11 February 2023",
+//     img: blogImg4,
+//     page: "/highlights/function-2023",
+//     content: `Students showcased cultural performances and academic achievements.`,
+//   },
+
+//   "student-achievement": {
+//     title: "Student Achievement",
+//     date: "02 April 2023",
+//     img: blogImg5,
+//     page: "/highlights/student-achievement",
+//     content: `Students achieved excellence in academics, sports, and competitions.`,
+//   },
+// };
+
+// export default function BlogDetail() {
+//   const { slug } = useParams();
+//   const blog = blogContent[slug];
+
+//   if (!blog) {
+//     return (
+//       <div style={{ padding: 40, textAlign: "center" }}>
+//         <h2>Blog Not Found ❌</h2>
+//         <p>
+//           Go back to{" "}
+//           <Link to="/highlights/blog" style={{ color: "#ff7a00" }}>
+//             Highlights Blog
+//           </Link>
+//         </p>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div
+//       className="blog-detail-container"
+//       style={{
+//         display: "flex",
+//         gap: 24,
+//         padding: 24,
+//         alignItems: "flex-start",
+//       }}
+//     >
+//       {/* LEFT SIDE CONTENT */}
+//       <div className="blog-detail-left" style={{ flex: 1, maxWidth: 800 }}>
+        
+//         {/* CLICKABLE IMAGE → FULL PAGE BLOG */}
+//         <Link to={blog.page}>
+//           <img
+//             src={blog.img}
+//             alt={blog.title}
+//             style={{
+//               width: "100%",
+//               maxHeight: 420,
+//               borderRadius: 6,
+//               objectFit: "cover",
+//               cursor: "pointer",
+//             }}
+//           />
+//         </Link>
+
+//         <h1 className="blog-detail-title" style={{ marginTop: 18 }}>
+//           {blog.title}
+//         </h1>
+
+//         <p className="blog-detail-date" style={{ color: "#555" }}>
+//           📅 {blog.date}
+//         </p>
+
+//         <p className="blog-detail-text" style={{ lineHeight: 1.7 }}>
+//           {blog.content}
+//         </p>
+//       </div>
+
+//       {/* RIGHT SIDEBAR */}
+//       <aside className="blog-sidebar" style={{ width: 300 }}>
+//         <h3>Categories</h3>
+//         <ul>
+//           <li>Education (5)</li>
+//           <li>Library (0)</li>
+//         </ul>
+
+//         <h3 style={{ marginTop: 30 }}>Latest Posts</h3>
+//         <ul>
+//           {Object.entries(blogContent).map(([s, item]) => (
+//             <li key={s} style={{ marginBottom: 8 }}>
+//               {/* This opens the same BlogDetail system */}
+//               <Link to={`/highlights/blog/${s}`}>{item.title}</Link>
+//             </li>
+//           ))}
+//         </ul>
+//       </aside>
+
+//       {/* FIXED BACK BUTTON */}
+//       <Link
+//         to="/highlights/blog"
+//         className="blog-back-btn"
+//         style={{
+//           position: "fixed",
+//           left: 24,
+//           bottom: 24,
+//           background: "#000",
+//           color: "#fff",
+//           padding: "8px 14px",
+//           borderRadius: 4,
+//           textDecoration: "none",
+//         }}
+//       >
+//         ← Back
+//       </Link>
+//     </div>
+//   );
+// }
+
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import "./BlogDetail.css";
@@ -388,8 +543,7 @@ import blogImg4 from "../images/blog4.jpg";
 import blogImg5 from "../images/blog5.jpg";
 
 /**
- * FULLY FIXED VERSION
- * Slugs, images, and full-page routes are all CORRECT now.
+ * Blog content data
  */
 export const blogContent = {
   "help-to-women-education": {
@@ -399,7 +553,6 @@ export const blogContent = {
     page: "/highlights/help-to-women-education",
     content: `Women empowerment improves lifestyle, confidence, and career opportunities.`,
   },
-
   "admission-notice": {
     title: "Admission Notice",
     date: "21 May 2024",
@@ -407,7 +560,6 @@ export const blogContent = {
     page: "/highlights/student-governance",
     content: `New admissions are open for session 2024-2025.`,
   },
-
   "admission-open-2024": {
     title: "Admission Open 2024-2025",
     date: "21 May 2024",
@@ -415,7 +567,6 @@ export const blogContent = {
     page: "/highlights/prospective-faculty",
     content: `Admissions have started for all UG & Diploma courses.`,
   },
-
   "function-2023": {
     title: "Annual Function 2023",
     date: "11 February 2023",
@@ -423,7 +574,6 @@ export const blogContent = {
     page: "/highlights/function-2023",
     content: `Students showcased cultural performances and academic achievements.`,
   },
-
   "student-achievement": {
     title: "Student Achievement",
     date: "02 April 2023",
@@ -452,48 +602,20 @@ export default function BlogDetail() {
   }
 
   return (
-    <div
-      className="blog-detail-container"
-      style={{
-        display: "flex",
-        gap: 24,
-        padding: 24,
-        alignItems: "flex-start",
-      }}
-    >
-      {/* LEFT SIDE CONTENT */}
-      <div className="blog-detail-left" style={{ flex: 1, maxWidth: 800 }}>
-        
-        {/* CLICKABLE IMAGE → FULL PAGE BLOG */}
+    <div className="blog-detail-container">
+      {/* LEFT CONTENT */}
+      <div className="blog-detail-left">
         <Link to={blog.page}>
-          <img
-            src={blog.img}
-            alt={blog.title}
-            style={{
-              width: "100%",
-              maxHeight: 420,
-              borderRadius: 6,
-              objectFit: "cover",
-              cursor: "pointer",
-            }}
-          />
+          <img src={blog.img} alt={blog.title} className="blog-detail-img" />
         </Link>
 
-        <h1 className="blog-detail-title" style={{ marginTop: 18 }}>
-          {blog.title}
-        </h1>
-
-        <p className="blog-detail-date" style={{ color: "#555" }}>
-          📅 {blog.date}
-        </p>
-
-        <p className="blog-detail-text" style={{ lineHeight: 1.7 }}>
-          {blog.content}
-        </p>
+        <h1 className="blog-detail-title">{blog.title}</h1>
+        <p className="blog-detail-date">📅 {blog.date}</p>
+        <p className="blog-detail-text">{blog.content}</p>
       </div>
 
       {/* RIGHT SIDEBAR */}
-      <aside className="blog-sidebar" style={{ width: 300 }}>
+      <aside className="blog-sidebar">
         <h3>Categories</h3>
         <ul>
           <li>Education (5)</li>
@@ -503,29 +625,52 @@ export default function BlogDetail() {
         <h3 style={{ marginTop: 30 }}>Latest Posts</h3>
         <ul>
           {Object.entries(blogContent).map(([s, item]) => (
-            <li key={s} style={{ marginBottom: 8 }}>
-              {/* This opens the same BlogDetail system */}
-              <Link to={`/highlights/blog/${s}`}>{item.title}</Link>
+            <li
+              key={s}
+              style={{
+                marginBottom: 10,
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+              }}
+            >
+              {slug === s ? (
+                // Current blog → show only thumbnail and faded text
+                <span style={{ opacity: 0.6, display: "flex", alignItems: "center", gap: 8 }}>
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    style={{ width: 40, height: 40, objectFit: "cover", borderRadius: 4 }}
+                  />
+                  <span>{item.title}</span>
+                </span>
+              ) : (
+                // Other blogs → clickable
+                <Link
+                  to={`/highlights/blog/${s}`}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 8,
+                    textDecoration: "none",
+                    color: "#ff7a00",
+                  }}
+                >
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    style={{ width: 40, height: 40, objectFit: "cover", borderRadius: 4 }}
+                  />
+                  <span>{item.title}</span>
+                </Link>
+              )}
             </li>
           ))}
         </ul>
       </aside>
 
       {/* FIXED BACK BUTTON */}
-      <Link
-        to="/highlights/blog"
-        className="blog-back-btn"
-        style={{
-          position: "fixed",
-          left: 24,
-          bottom: 24,
-          background: "#000",
-          color: "#fff",
-          padding: "8px 14px",
-          borderRadius: 4,
-          textDecoration: "none",
-        }}
-      >
+      <Link to="/highlights/blog" className="blog-back-btn">
         ← Back
       </Link>
     </div>

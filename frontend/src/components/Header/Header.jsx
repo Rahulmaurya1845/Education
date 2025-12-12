@@ -75,7 +75,7 @@ export default function Header() {
           <div className="topbar-left">
             <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
             <span>
-              Adkaliya chauraha, opposite Meenakshi gas, Godam, udaipur road, Salumber District - Udaipur (Rajasthan) 313027
+             <strong> Adkaliya chauraha, opposite Meenakshi gas, Godam, udaipur road, Salumber District - Udaipur (Rajasthan) 313027</strong>
             </span>
           </div>
           <div className="topbar-right" role="navigation" aria-label="User links">
